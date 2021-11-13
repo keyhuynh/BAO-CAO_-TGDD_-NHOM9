@@ -1,0 +1,285 @@
+﻿@page "/productdetail/{id}"
+@using Extensions
+@if (Product != null)
+{
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white pl-0">
+            <li class="breadcrumb-item"><a href="/category/@Product.CategoryId">@Product.Category?.Name</a></li>
+            <li class="breadcrumb-item"><a href="/productdetail/@Product.Id">@Product.Name</a></li>
+        </ol>
+    </nav>
+    <h1 class="mb-0">@Product.Name</h1>
+    <div class="box02">
+        <div class="box02__left">
+
+        </div>
+        <div class="box02__right">
+            <i class="icondetail-sosanh"></i>
+            So sánh
+        </div>
+    </div>
+    <div class="like-fanpage" >
+        <iframe src="//www.facebook.com/plugins/like.php?href=http://www.thegioididong.com/dtdd/samsung-galaxy-z-fold3-5g-512gb?src=osp&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:40px;" allowtransparency="true" data-gtm-yt-inspected-1_19="true" data-gtm-yt-inspected-1070012_61="true" data-gtm-yt-inspected-1070012_79="true" data-gtm-yt-inspected-1070012_187="true"></iframe>
+    </div>
+    <div class="box_main">
+        <div class="box_left">
+            <div class="box01">
+                <div class="box01__show">
+                    <div class="show-tab">
+                        <div class="detail-slider">
+                            <div class="owl-stage-outer owl-height">
+                                <div class="owl-stage">
+                                    <div class="owl-item">
+                                        <a href="javascript:void(0)" class="slider-item ">
+                                            <img src="@Product.ThumbnailImage" alt="@Product.Name" width="400" height="394">
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scrolling_inner">
+                    <div class="box01__tab scrolling">
+                        <div class="box01__tab scrolling">
+                            <div id="thumb-featured-images-gallery-0" class="item itemTab active " data-gallery-id="featured-images-gallery" data-color-id="0" data-is-full-spec="False" data-color-order-id="0" data-isfeatureimage="True">
+                                <div class="item-border">
+                                    <i class="icondetail-noibat"></i>
+                                </div>
+                                <p>Điểm nổi bật</p>
+                            </div>
+
+                            <div id="thumb-unbox-gallery-0" class="item itemTab  is-show-popup" data-gallery-id="unbox-gallery" data-color-id="0" data-is-full-spec="False" data-color-order-id="0" data-isfeatureimage="True">
+                                <div class="item-border">
+                                    <i class="icondetail-box"></i>
+                                </div>
+                                <p>Hình mở hộp</p>
+                            </div>
+                            <div id="thumb-360-degree-gallery-0" class="item itemTab  is-show-popup" data-gallery-id="360-degree-gallery" data-color-id="0" data-is-full-spec="False" data-color-order-id="0" data-isfeatureimage="True">
+                                <div class="item-border">
+                                    <i class="icondetail-360do"></i>
+                                </div>
+                                <p>Hình 360 độ</p>
+                            </div>
+                            <div id="thumb-specification-gallery-0" class="item itemTab  is-show-popup" data-gallery-id="specification-gallery" data-color-id="0" data-is-full-spec="True" data-color-order-id="0" data-isfeatureimage="True">
+                                <div class="item-border">
+                                    <i class="icondetail-thongso"></i>
+                                </div>
+                                <p>Thông số kỹ thuật</p>
+                            </div>
+                            <div id="thumb-article-gallery-0" class="item itemTab  is-show-popup" data-gallery-id="article-gallery" data-color-id="0" data-is-full-spec="False" data-color-order-id="0" data-isfeatureimage="True">
+                                <div class="item-border">
+                                    <i class="icondetail-danhgia"></i>
+                                </div>
+                                <p>Bài viết đánh giá</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="policy_intuitive">
+                    <div class="policy">
+                        <ul class="policy__list">
+                            <li>
+                                <div class="iconl">
+                                    <i class="icondetail-doimoi"></i>
+                                </div>
+                                <p>
+                                    Hư gì đổi nấy <b>12 tháng</b>  tại 2805 siêu thị toàn quốc (miễn phí tháng đầu) <a href="https://www.thegioididong.com/chinh-sach-bao-hanh-san-pham"></a>
+                                    <a href="javascript:;" onclick="showPopupPolicy()" title="Chính sách đổi trả">
+                                        Xem chi tiết
+                                    </a>
+                                </p>
+                            </li>
+                            <li data-field="IsSameBHAndDT">
+                                <div class="iconl">
+                                    <i class="icondetail-baohanh"></i>
+                                </div>
+                                <p>
+                                    Bảo hành <b>chính hãng 1 năm</b>
+
+                                </p>
+                            </li>
+
+                            <li><div class="iconl"><i class="icondetail-sachhd"></i></div><p>Bộ sản phẩm gồm: Hộp, Sách hướng dẫn, Cây lấy sim, Cáp Type C <a href="javascript:" class="hinh-mo-hop-link">Xem hình</a></p></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="parameter__title">Mô tả @Product.Name: @Product.Description</p>
+
+            </div>
+        </div>
+        <div class="box_right">
+            <div class="box04 box_normal">
+                <div class="box04__txt">
+                    <div class="box04__txt">
+                        Giá tại <a href="javascript:void(0);" >Hồ Chí Minh</a>
+                    </div>
+                </div>
+                <div class="price-one">
+                    <div class="box-price">
+                        <p class="box-price-present">@DecimalExtensions.ToCurrency(Product.Price) </p>
+                        <span class="label label--black">Trả góp 0%</span>
+                    </div>
+                </div>
+                <div class="block block-price1">
+                    <div class="block__promo">
+                        <div class="pr-top">
+                            <p class="pr-txtb">Khuyến mãi  trị giá 1.000.000 ₫</p>
+                            <i class="pr-txt">Giá và khuyến mãi dự kiến áp dụng đến 23:00 30/12</i>
+                        </div>
+                        <div class="pr-content">
+                            <div class="pr-item">
+                                <div class="divb t1" data-promotion="809204" data-group="Tặng" data-discount="1000000" data-productcode="DISCOUNT" data-tovalue="1000000">
+                                    <span class="nb">1</span>
+                                    <div class="divb-right">
+                                        <p>Giảm giá 1,000,000đ (Không áp dụng kèm Thu cũ đổi mới)</p>
+                                    </div>
+                                </div>
+                                <div class="divb t6" data-promotion="796843" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="9500">
+                                    <span class="nb">2</span>
+                                    <div class="divb-right">
+                                        <p>Giảm thêm 5% khi mua cùng sản phẩm bất kỳ có giá cao hơn <a href="http://www.thegioididong.com/tin-tuc/mung-het-cach-ngan-giam-2-lan-tien-1388924"> Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                                <div class="divb t6" data-promotion="791066" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="7000">
+                                    <span class="nb">3</span>
+                                    <div class="divb-right">
+                                        <p>Gói dịch vụ ưu tiên cao cấp và phòng chờ hạng thương gia <a href="https://www.thegioididong.com/tin-tuc/dich-vu-uu-tien-phong-cho-thuong-gia-galaxy-z-fold3-z-flip3-1374427"> Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                                <div class="divb t6" data-promotion="809199" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="5000">
+                                    <span class="nb">4</span>
+                                    <div class="divb-right">
+                                        <p>Giảm đến 4,000,000đ khi tham gia thu cũ đổi mới <a href="https://www.thegioididong.com/thu-cu-doi-moi"> Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                                <div class="divb t6" data-promotion="788271" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="1000">
+                                    <span class="nb">5</span>
+                                    <div class="divb-right">
+                                        <p>Trả góp 0% thẻ tín dụng <a href="http://www.thegioididong.com/tin-tuc/mua-samsung-galaxy-tra-gop-0-qua-the-tin-dung-1386100"> Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                                <div class="divb t6" data-promotion="811950" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="0">
+                                    <span class="nb">6</span>
+                                    <div class="divb-right">
+                                        <p>Nhập mã TGDD11 giảm 5% tối đa 700.000đ cho hóa đơn từ 500.000đ khi thanh toán qua Ví Moca trên ứng dụng Grab <a href="https://www.thegioididong.com/tin-tuc/uu-dai-khi-thanh-toan-qua-vi-moca-o-the-gioi-di-dong-1393623" target="_blank">(click xem chi tiết)</a></p>
+                                    </div>
+                                </div>
+                                <div class="divb t6" data-promotion="810104" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="0">
+                                    <span class="nb">7</span>
+                                    <div class="divb-right">
+                                        <p>Nhập mã DMX100 giảm 3% tối đa 100.000đ khi thanh toán quét QRcode qua App của ngân hàng <a href="http://www.thegioididong.com/tin-tuc/nhap-ma-giam-gia-vnpay-1377917" target="_blank">(click xem chi tiết)</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="status-delivery">
+                        <div id="thoi-gian-giao-hang" class="xtoydays rslt none">
+                            <div class="quickdelivery ">
+                                <div class="deliverytime">
+                                    <span class="con_hang">Còn hàng</span>
+                                    <p><a href="javascript:" class="onoffdelibox unline"><i class="icondetail-address"></i>Chọn địa chỉ nhận hàng</a> để biết thời gian giao.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="javascript:void(0)" class="store">
+                        <i class="icondetail-store"></i>
+                        Xem siêu thị có hàng
+                    </a>
+
+                    <div class="block-button normal">
+                        <a href="javascript:void(0);" class="btn-buynow jsBuy">MUA NGAY</a>
+
+                        <a href="javascript:void(0)" class="btn-ins pay-taichinh  ">
+                            MUA TRẢ GÓP 0%
+                            <span>Duyệt hồ sơ trong 5 phút</span>
+                        </a>
+                        <a href="javascript:void(0)" class="btn-ins pay-nganluong ">
+                            TRẢ GÓP  QUA THẺ
+                            <span>Visa, Mastercard, JCB, Amex</span>
+                        </a>
+                    </div>
+                    <p class="callorder">Gọi đặt mua <a href="tel:18001060">1800.1060</a> (7:30 - 22:00)</p>
+                    <div class="promoadd" data-max="2">
+                        <p class="promoadd__ttl">
+                            <em><b class="bonus_count">2</b> ưu đãi thêm</em>
+                            <span>Dự kiến áp dụng đến 23:00 30/12</span>
+                        </p>
+                        <ul class="promoadd__list">
+                            <li class="bhx">
+                                <i class="icondetail-tick"></i>
+                                <div class="promo_BHX">
+                                    <div class="l2">
+                                        <span>
+                                            Tặng cho khách lần đầu mua hàng online tại web <a href="https://www.bachhoaxanh.com/?utm_source=tgdd_ttc_tct_20%&amp;utm_medium=link_tct&amp;utm_campaign=tgdd">BachhoaXANH.com</a>
+                                        </span>
+                                        <div class="content">
+                                            <p class="first-pap">Mã giảm <strong>20% tối đa 100.000đ</strong></p>
+
+                                            <p> 5 lần <b>FREEship</b></p>
+                                        </div>
+                                        <span>
+                                            Áp dụng tại Tp.HCM và 1 số khu vực, <b>1 SĐT nhận 1 lần</b>
+                                        </span>
+                                        <a href="https://www.bachhoaxanh.com/kinh-nghiem-hay/tang-phieu-mua-hang-bachhoaxanhcom-khi-mua-sam-tai-thegioididongcom-va-dienmayxanhcom-1276540?utm_source=tgdd_ttc_tct_the_le_20%&amp;utm_medium=link_tct&amp;utm_campaign=tgdd" target="_blank">(Xem chi tiết)</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="" data-tovalue="100" data-promotion="806759">
+                                <i class="icondetail-tick"></i>
+                                <p>Mua kèm Tai nghe Bluetooth TWS Samsung Galaxy Buds 2 R177N giảm 15%</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <p class="related__ttl">Xem thêm @Product.Category?.Name khác</p>
+            <ul class="listproduct">
+                @foreach (var item in Products)
+                {
+                    <li class="item">
+                        <a href="/productdetail/@item.Id" class="main-contain">
+                            <div class="item-label">
+                                <span class="lb-tragop">Trả góp 0%</span>
+                            </div>
+                            <div class="item-img item-img_42">
+                                <img class="thumb ls-is-cached lazyloaded"
+                                     alt="@item.Name"
+                                     src="@item.ThumbnailImage" />
+                                <img src="https://cdn.tgdd.vn/ValueIcons/label-moi-ra-mat-fnal.png"
+                                     width="40"
+                                     height="40"
+                                     loading="lazy"
+                                     class="lbliconimg lbliconimg_42 tgdd" />
+                            </div>
+
+                            <h3>@item.Name</h3>
+                            <strong class="price">@DecimalExtensions.ToCurrency(item.Price)</strong>
+                        </a>
+                        <div class="item-bottom">
+                            <a href="#" class="shiping"></a>
+                        </div>
+                    </li>
+                }
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+}
+else
+{
+    <div>Loading...</div>
+}
